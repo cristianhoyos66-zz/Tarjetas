@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6">
+  <display-name>TarjetaEAR</display-name>
+  <module>
+    <web>
+      <web-uri>TarjetaWEB.war</web-uri>
+      <context-root>TarjetaWEB</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>TarjetaEJB.jar</ejb>
+  </module>
+  <library-directory>lib</library-directory>
+</application>

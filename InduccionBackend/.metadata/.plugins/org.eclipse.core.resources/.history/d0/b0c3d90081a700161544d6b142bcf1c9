@@ -1,0 +1,18 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import org.junit.Test;
+
+public class JuegoAzarTest {
+
+	@Test
+	public void shouldReturnWinner() {
+		JuegoAzar juegoAzar = new JuegoAzar();
+		String result = juegoAzar.throwingDice();
+	}
+	
+	@Test
+	public void shouldReturnLoser() {
+		
+	}
+	
+}

@@ -1,0 +1,29 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class CalculatorTest {
+	
+	@Test
+	public void shouldReturn8WhenSend5and3() {
+		//Arrange
+		Calculator calculator = new Calculator();
+		//Act
+		Integer result = calculator.sum(5, 3);
+		//Assert
+		Assert.assertTrue("No fue igual a 8", 8 == result);
+	}
+	
+	@Test
+	public void shouldReturn20WhenSend5and4() {
+		//Arrange
+		Calculator calculator = new Calculator();
+		//Act
+		Integer result = calculator.multiply(5, 4);
+		//Assert
+		Assert.assertTrue("No fue igual a 20", 20 == result);
+	}
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;co.com.techandsolve.tarjeta.tests.JuegoAzar&apos; to &apos;JuegoAzarTest&apos;&#x0D;&#x0A;- Original project: &apos;TarjetaEJB&apos;&#x0D;&#x0A;- Original element: &apos;co.com.techandsolve.tarjeta.tests.JuegoAzar&apos;&#x0D;&#x0A;- Renamed element: &apos;co.com.techandsolve.tarjeta.tests.JuegoAzarTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JuegoAzar&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java&lt;co.com.techandsolve.tarjeta.tests{JuegoAzar.java[JuegoAzar" matchStrategy="1" name="JuegoAzarTest" qualified="false" references="true" similarDeclarations="false" stamp="1478807678915" textual="false" version="1.0"/>
+</session>

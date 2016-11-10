@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculatorTest" project="TarjetaEJB" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="co.com.techandsolve.tarjeta.tests.CalculatorTest" time="0.001">
+    <testcase name="mocksTest" classname="co.com.techandsolve.tarjeta.tests.CalculatorTest" time="0.001"/>
+    <testcase name="shouldReturn20WhenSend5and4" classname="co.com.techandsolve.tarjeta.tests.CalculatorTest" time="0.0"/>
+    <testcase name="shouldReturn8WhenSend5and3" classname="co.com.techandsolve.tarjeta.tests.CalculatorTest" time="0.0"/>
+  </testsuite>
+</testrun>

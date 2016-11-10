@@ -1,0 +1,12 @@
+package co.com.techandsolve.tarjeta.tests;
+
+public class JuegoAzar {
+
+	public String throwingDice() {
+		if (Math.random() == 5) {
+			return "Winner";
+		}
+		return "Loser";
+	}
+
+}

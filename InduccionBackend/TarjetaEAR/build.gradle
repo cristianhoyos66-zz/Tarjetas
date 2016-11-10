@@ -1,0 +1,25 @@
+apply plugin: 'ear'
+apply plugin: 'java'
+apply plugin: 'war'
+
+group = 'co.com.tarjeta'
+
+test.dependsOn(":TarjetaEJB:test",":TarjetaWEB:test")
+
+repositories {
+	mavenCentral();		
+}
+
+
+dependencies {
+	deploy project(path:':TarjetaEJB', configuration:'archives')
+	deploy project(path:':TarjetaWEB', configuration:'archives')
+	earlib 'org.jboss.logging:jboss-logging:3.1.4.GA'
+	earlib 'commons-beanutils:commons-beanutils:1.9.2'
+	earlib 'com.google.guava:guava:18.0'
+}
+
+ear {
+	archiveName = "${baseName}.${extension}"
+}
+

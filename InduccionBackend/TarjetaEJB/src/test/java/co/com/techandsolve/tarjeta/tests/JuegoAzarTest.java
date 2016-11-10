@@ -1,0 +1,32 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+import org.mockito.Mockito;
+
+public class JuegoAzarTest {
+
+	@Test
+	public void shouldReturnWinner() {
+		Dice dice = Mockito.mock(Dice.class);
+		JuegoAzar juegoAzar = new JuegoAzar(dice);
+		Mockito.when(dice.throwDice()).thenReturn(5);
+		
+		String result = juegoAzar.throwingDice();
+		
+		assertTrue("Winner".equals(result));
+	}
+	
+	@Test
+	public void shouldReturnLoser() {
+		Dice dice = Mockito.mock(Dice.class);
+		JuegoAzar juegoAzar = new JuegoAzar(dice);
+		Mockito.when(dice.throwDice()).thenReturn(2);
+		
+		String result = juegoAzar.throwingDice();
+		
+		assertTrue("Loser".equals(result));
+	}
+	
+}

@@ -1,0 +1,15 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import java.util.Random;
+
+public class JuegoAzar {
+
+	public String throwingDice() {
+		int randomNumber = rn.nextInt(6) + 1;
+		if (randomNumber == 5) {
+			return "Winner";
+		}
+		return "Loser";
+	}
+
+}

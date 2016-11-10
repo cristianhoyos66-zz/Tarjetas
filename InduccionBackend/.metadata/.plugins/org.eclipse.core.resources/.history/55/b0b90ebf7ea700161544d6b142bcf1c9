@@ -1,0 +1,63 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Mockito;
+
+import static org.fest.assertions.api.Assertions.*;
+
+public class CalculatorTest {
+	
+	@Test
+	public void shouldReturn8WhenSend5and3() {
+		//Arrange
+		Calculator calculator = new Calculator();
+		//Act
+		Integer result = calculator.sum(5, 3);
+		//Assert
+		assertTrue("No fue igual a 8", 8 == result);
+	}
+	
+	@Test
+	public void shouldReturn20WhenSend5and4() {
+		//Arrange
+		Calculator calculator = new Calculator();
+		//Act
+		Integer result = calculator.multiply(5, 4);
+		//Assert
+		assertTrue("No fue igual a 20", 20 == result);
+		assertThat(result).isEqualTo(20);
+	}
+	
+	@Test
+	public void metodoQueUtilizaMocks(){
+		//Dummies
+		Calculator dummie = Mockito.mock(Calculator.class);
+		Mockito.when(dummie.sum(Mockito.anyInt(), Mockito.anyInt()))
+		.thenReturn(5);
+		
+		assertThat(dummie.sum(0, 3)).isEqualTo(5);
+		assertThat(dummie.sum(7, 6)).isEqualTo(5);
+		
+		//Fake or Stubs
+		Calculator stub = Mockito.mock(Calculator.class);
+		Mockito.when(stub.sum(8, 10))
+		.thenReturn(20);
+		
+		assertThat(stub.sum(8, 10)).isEqualTo(20);
+		assertThat(stub.sum(8, 11)).isEqualTo(0);
+		
+		//Spy
+		ArgumentCaptor<Integer> captureInt = ArgumentCaptor.forClass(Integer.class);
+		Calculator spy = Mockito.mock(Calculator.class);
+		
+		spy.sum(5, 20);
+		spy.multiply(10, 15);
+		
+		
+		Mockito.verify(spy).sum(5, 20);
+		Mockito.verify(spy).multiply(10, 15);
+		
+	}
+}

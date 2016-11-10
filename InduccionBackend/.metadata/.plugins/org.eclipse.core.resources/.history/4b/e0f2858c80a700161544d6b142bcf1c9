@@ -1,0 +1,10 @@
+package co.com.techandsolve.tarjeta.tests;
+
+public class JuegoAzar {
+
+	public String throwingDice() {
+		
+		return null;
+	}
+
+}

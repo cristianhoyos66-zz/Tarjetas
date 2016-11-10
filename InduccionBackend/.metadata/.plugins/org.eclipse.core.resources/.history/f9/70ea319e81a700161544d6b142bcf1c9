@@ -1,0 +1,16 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import java.util.Random;
+
+public class JuegoAzar {
+
+	public String throwingDice() {
+		Random rn = new Random();
+		rn.nextInt(6 - 1 + 1) + min;
+		if (Math.random() == 5) {
+			return "Winner";
+		}
+		return "Loser";
+	}
+
+}

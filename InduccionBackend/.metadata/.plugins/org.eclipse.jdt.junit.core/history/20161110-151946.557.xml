@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="JuegoAzarTest" project="TarjetaEJB" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="co.com.techandsolve.tarjeta.tests.JuegoAzarTest" time="0.201">
+    <testcase name="shouldReturnWinner" classname="co.com.techandsolve.tarjeta.tests.JuegoAzarTest" time="0.201"/>
+    <testcase name="shouldReturnLoser" classname="co.com.techandsolve.tarjeta.tests.JuegoAzarTest" time="0.0"/>
+  </testsuite>
+</testrun>

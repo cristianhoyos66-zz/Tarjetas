@@ -1,0 +1,10 @@
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2016-11-10 13:48:39.980
+!MESSAGE The server "Red Hat JBoss EAP 6.1+" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files\Java\jre1.8.0_65 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2016-11-10 13:48:45.405
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2016-11-10 13:49:31.542
+!MESSAGE Server Startup Succeeded

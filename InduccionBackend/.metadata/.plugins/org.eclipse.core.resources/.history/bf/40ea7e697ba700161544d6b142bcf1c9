@@ -1,0 +1,18 @@
+package co.com.techandsolve.tarjeta.tests;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class CalculatorTest {
+	
+	@Test
+	public void shouldReturn8WhenSend5and3() {
+		//Arrange
+		Calculator calculator = new Calculator();
+		//Act
+		Integer result = calculator.sum(5, 3);
+		//Assert
+		Assert.assertTrue(8 == result);
+	}
+
+}

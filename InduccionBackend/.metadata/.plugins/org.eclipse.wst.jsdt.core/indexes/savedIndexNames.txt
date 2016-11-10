@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+D:\Proyectos\Inducción\InduccionBackend\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+442454004.index
+2508471434.index
+1764487540.index
+4052078003.index
+2292786133.index
+3883035791.index
+2932141530.index

@@ -1,0 +1,9 @@
+package co.com.techandsolve.tarjeta.tests;
+
+public class Dice {
+
+	public int throwDice() {
+		return 0;
+	}
+
+}

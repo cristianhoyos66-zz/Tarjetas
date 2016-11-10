@@ -1,0 +1,10 @@
+package co.com.techandsolve.tarjeta.tests;
+
+public class Dice {
+
+	public int throwDice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
