@@ -1,0 +1,5 @@
+package co.com.tarjeta.bean;
+
+public class TarjetaBean {
+
+}

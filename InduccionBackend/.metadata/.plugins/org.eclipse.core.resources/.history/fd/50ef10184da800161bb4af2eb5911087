@@ -1,0 +1,16 @@
+package co.com.tarjeta.business;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+
+import co.com.tarjeta.entities.Tarjeta;
+
+@Stateless
+public class TarjetaBusiness {
+	
+	public List<Tarjeta> getAllCards() {
+		List<Tarjeta> lsList = TarjetaBean.buscarTodas();
+	}
+
+}
