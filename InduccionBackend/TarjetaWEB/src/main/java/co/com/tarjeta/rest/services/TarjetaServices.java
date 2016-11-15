@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 
 import co.com.tarjeta.business.TarjetaBusiness;
 import co.com.tarjeta.business.TestEJB;
+import co.com.tarjeta.dto.TarjetaDTO;
 import co.com.tarjeta.entities.Tarjeta;
 
 @RequestScoped
@@ -33,7 +34,7 @@ public class TarjetaServices {
 	@Path("getAllCards")
 	@Produces(MediaType.APPLICATION_JSON)
 	@GET
-	public List<Tarjeta> getAllCards() {
+	public List<TarjetaDTO> getAllCards() {
 		return tarjetaBusiness.getAllCards();
 	}
 	

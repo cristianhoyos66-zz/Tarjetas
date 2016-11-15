@@ -7,4 +7,11 @@
 <fullyQualifiedTypeName name="org.mockito.Mockito"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="co.com.tarjeta.business.TestEJB"/>
+<fullyQualifiedTypeName name="co.com.tarjeta.business.TarjetaBusiness"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="co.com.tarjeta.entities.Tarjeta"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="co.com.tarjeta.bean.TarjetaBean"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
 </qualifiedTypeNameHistroy>

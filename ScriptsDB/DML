@@ -1,1 +1,5 @@
 select * from tbl_cards;
+insert into tbl_cards values (2, '85-95', 89, 'visa', 54, 96, 25);
+insert into tbl_cards values (3, '85-95', 89, 'american express', 54, 96, 25);
+insert into tbl_cards values (4, '85-95', 89, 'mastercard', 54, 96, 25);
+insert into tbl_cards values (5, '85-95', 89, 'mastercard', 54, 96, 0);

@@ -1,0 +1,31 @@
+<h2>Tarjetas</h2><br>
+<div class="table-responsive-vertical md-whiteframe-z1">
+  <table id="table" class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Número de tarjeta</th>
+        <th>Cédula</th>
+        <th>Tipo</th>
+        <th>Deuda</th>
+        <th>Monto Total</th>
+        <th>Días de mora</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody
+      <tr ng-repeat="data in vm.flights | filter:vm.search:strict track by $index">
+        <td data-title="ID">{{data.id}}</td>
+        <td data-title="cardNumber">{{data.cardNumber}}</td>
+        <td data-title="identityNumber">{{data.identityCard}}</td>
+        <td data-title="type">{{data.type}}</td>
+        <td data-title="debt">{{data.debt}}</td>
+        <td data-title="totalAmount">{{data.totalAmount}}</td>
+        <td data-title="delayDays">{{data.delayDays}}</td>
+        <td data-title="status" ng-show="data.delayDays > 30">Bloqueada</td>
+        <td data-title="status" ng-show="data.delayDays < 30 && data.delayDays > 0">En mora</td>
+        <td data-title="status" ng-show="data.delayDays === 0">Al día</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

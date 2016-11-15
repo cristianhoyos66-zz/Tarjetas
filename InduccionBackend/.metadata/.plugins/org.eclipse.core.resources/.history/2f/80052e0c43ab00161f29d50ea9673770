@@ -1,0 +1,22 @@
+package co.com.tarjeta.business;
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+
+import co.com.tarjeta.bean.TarjetaBean;
+import co.com.tarjeta.entities.Tarjeta;
+
+@Stateless
+public class TarjetaBusiness {
+	
+	@Inject
+	TarjetaBean tarjetaBean;
+	
+	public List<Tarjeta> getAllCards() {
+		List<Tarjeta> lsList = tarjetaBean.buscarTodas();
+		return lsList;
+	}
+
+}

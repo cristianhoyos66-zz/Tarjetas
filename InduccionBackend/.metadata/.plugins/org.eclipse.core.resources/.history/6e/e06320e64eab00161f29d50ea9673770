@@ -1,0 +1,47 @@
+package co.com.tarjeta.business;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+
+import co.com.tarjeta.bean.TarjetaBean;
+import co.com.tarjeta.dto.TarjetaDTO;
+import co.com.tarjeta.entities.Tarjeta;
+import org.apache.commons.beanutils.BeanUtils;
+
+@Stateless
+public class TarjetaBusiness {
+	
+	@Inject
+	TarjetaBean tarjetaBean;
+	
+	public List<TarjetaDTO> getAllCards() {
+		List<Tarjeta> lsList = tarjetaBean.buscarTodas();
+		return lsList.stream().map(i -> 
+			{
+				TarjetaDTO tarjetaDTO = new TarjetaDTO();
+			}).collect(Collectors.toList());
+		/*List<Tarjeta> lsList = tarjetaBean.buscarTodas();
+		for (Tarjeta tarjeta : lsList) {
+			Integer delayDays = tarjeta.getDelayDays();
+			String type = tarjeta.getType();
+			Double debt = tarjeta.getDebt();
+			tarjeta.setDebt(calculateNewDebt(type, debt, delayDays));
+		}
+		return lsList;*/
+	}
+	
+	private Double calculateNewDebt(String type, Double debt, Integer delayDays) {
+		switch(type) {
+			case "visa":
+			case "american express":
+				return debt + (delayDays*2000);
+			case "mastercard":
+				return debt + (delayDays*1000);
+		}
+		return debt;
+	}
+
+}

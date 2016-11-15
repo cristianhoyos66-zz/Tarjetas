@@ -1,0 +1,63 @@
+package co.com.tarjeta.business;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+
+import org.apache.commons.beanutils.BeanUtils;
+
+import co.com.tarjeta.bean.TarjetaBean;
+import co.com.tarjeta.dto.TarjetaDTO;
+import co.com.tarjeta.entities.Tarjeta;
+
+@Stateless
+public class TarjetaBusiness {
+	
+	@Inject
+	TarjetaBean tarjetaBean;
+	
+	public List<TarjetaDTO> getAllCards() {
+		List<Tarjeta> lsList = tarjetaBean.buscarTodas();
+		List<TarjetaDTO> lsListDTO = new ArrayList<>();
+		for (Tarjeta tarjeta : lsList) {
+			
+			Integer delayDays = tarjeta.getDelayDays();
+			String type = tarjeta.getType();
+			Double debt = tarjeta.getDebt();
+			
+			TarjetaDTO tarjetaDTO = new TarjetaDTO();
+			try {
+				BeanUtils.copyProperties(tarjetaDTO, tarjeta);
+				tarjetaDTO.setDebt(calculateNewDebt(type, debt, delayDays));
+			} catch (IllegalAccessException | InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			tarjetaDTO.setDebt());
+			tarjetaDTO.setCardNumber(tarjeta.getCardNumber());
+			tarjetaDTO.setId(tarjeta.getId());
+			tarjetaDTO.setIdentityCard(tarjeta.getIdentityCard());
+			tarjetaDTO.setType(type);
+			tarjetaDTO.setDelayDays(delayDays);
+			tarjetaDTO.setTotalAmount(tarjeta.getTotalAmount());
+			
+			lsListDTO.add(tarjetaDTO);
+		}
+		return lsListDTO;
+	}
+	
+	private Double calculateNewDebt(String type, Double debt, Integer delayDays) {
+		switch(type) {
+			case "visa":
+			case "american express":
+				return debt + (delayDays*2000);
+			case "mastercard":
+				return debt + (delayDays*1000);
+		}
+		return debt;
+	}
+
+}

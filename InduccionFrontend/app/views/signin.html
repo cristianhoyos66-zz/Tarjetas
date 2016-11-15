@@ -1,0 +1,22 @@
+<div class="cointainer-basic-page">
+  <div layout="column" class="loginBox md-whiteframe-z1">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Login</span></h2>
+    </md-toolbar>
+    <md-content layout="column" class="md-padding">
+      <md-input-container>
+	<label>Username</label>
+	<input type="email" ng-model="username"/>
+      </md-input-container>
+      <md-input-container>
+	<label>Password</label>
+	<input type="password" ng-model="password"/>
+      </md-input-container>
+      <div layout="row" layout-align="center center" style="padding-top:20px;">
+	<md-button class="md-raised md-primary" ng-click="vm.signin()">Login</md-button>
+	<div flex="flex"></div>
+	<md-button href="" md-no-ink="md-no-ink">Sign up</md-button>
+      </div>
+    </md-content>
+  </div>
+</div>
