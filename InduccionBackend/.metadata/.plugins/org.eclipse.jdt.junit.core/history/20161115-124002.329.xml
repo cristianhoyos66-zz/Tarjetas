@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TarjetaBusinessTest" project="TarjetaEJB" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="co.com.tarjeta.business.TarjetaBusinessTest" time="0.0">
+    <testcase name="calculateNewDebtShouldReturnDebtPlus1000xDelayDaysWhenTypeMasterCard" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.0"/>
+    <testcase name="calculateNewDebtShouldReturnDebtPlus2000xDelayDaysWhenTypeVisaAE" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.0"/>
+  </testsuite>
+</testrun>

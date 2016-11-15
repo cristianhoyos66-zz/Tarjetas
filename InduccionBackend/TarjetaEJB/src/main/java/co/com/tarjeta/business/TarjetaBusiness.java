@@ -1,7 +1,6 @@
 package co.com.tarjeta.business;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,7 +17,7 @@ import co.com.tarjeta.entities.Tarjeta;
 public class TarjetaBusiness {
 	
 	@Inject
-	TarjetaBean tarjetaBean;
+	private TarjetaBean tarjetaBean;
 	
 	public List<TarjetaDTO> getAllCards() {
 		List<Tarjeta> lsList = tarjetaBean.buscarTodas();
@@ -35,7 +34,7 @@ public class TarjetaBusiness {
 		).collect(Collectors.toList());
 	}
 	
-	private Double calculateNewDebt(String type, Double debt, Integer delayDays) {
+	protected Double calculateNewDebt(String type, Double debt, Integer delayDays) {
 		switch(type) {
 			case "visa":
 			case "american express":

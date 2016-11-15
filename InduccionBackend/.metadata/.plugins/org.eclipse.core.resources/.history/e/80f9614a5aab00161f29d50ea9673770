@@ -1,0 +1,20 @@
+package co.com.tarjeta.business;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TarjetaBusinessTest {
+	
+	@Test
+	public void calculateNewDebtShouldReturnDebtPlus2000xDelayDaysWhenTypeVisaAE() {
+		TarjetaBusiness tarjetaBusiness = new TarjetaBusiness();
+		
+		Double result = tarjetaBusiness.calculateNewDebt("visa", 4.0, 5);
+		Double result2 = tarjetaBusiness.calculateNewDebt("american express", 4.0, 5);
+		
+		assertTrue("No fue igual a 10004", 10004 == result);
+		assertTrue("No fue igual a 10005", 10005 == result2);
+	}
+
+}

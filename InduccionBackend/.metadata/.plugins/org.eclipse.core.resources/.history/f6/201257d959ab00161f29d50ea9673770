@@ -1,0 +1,13 @@
+package co.com.tarjeta.business;
+
+import org.junit.Test;
+
+public class TarjetaBusinessTest {
+	
+	@Test
+	public void calculateNewDebtShouldReturnDebtPlus2000xDelayDaysWhenTypeVisaAE() {
+		TarjetaBusiness tarjetaBusiness = new TarjetaBusiness();
+		Integer result = tarjetaBusiness.calculateNewDebt("visa", 4.0, 5);
+	}
+
+}

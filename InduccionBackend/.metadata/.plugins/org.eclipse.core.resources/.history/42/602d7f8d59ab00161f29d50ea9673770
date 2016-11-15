@@ -1,0 +1,13 @@
+package co.com.tarjeta.business;
+
+import org.junit.Test;
+
+public class TarjetaBusinessTest {
+	
+	@Test
+	public void calculateNewDebtShouldReturnDebtPlus2000xDelayDays() {
+		TarjetaBusiness tarjetaBusiness = new TarjetaBusiness();
+		tarjetaBusiness.calculateNewDebt(null, null, null);
+	}
+
+}
