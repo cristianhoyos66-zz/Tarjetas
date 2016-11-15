@@ -103,15 +103,26 @@ public class FilterCORS implements Filter {
 	        doBeforeProcessing(request, response);
 	        
 	        Throwable problem = null;
-    try {
-	        	
+	        
+	        try {
+	        	chain.doFilter(request, response);
 	        }catch (Exception e) {
-	        	problem = e;
 				e.printStackTrace();
 			}
-
+	        
 	        doAfterProcessing(request, response);
 
+	        // If there was a problem, we want to rethrow it if it is
+	        // a known type, otherwise log it.
+	        if (problem != null) {
+	            if (problem instanceof ServletException) {
+	                throw (ServletException) problem;
+	            }
+	            if (problem instanceof IOException) {
+	                throw (IOException) problem;
+	            }
+	            sendProcessingError(problem, response);
+	        }
 	    }
 
 	    /**
