@@ -1,5 +1,0 @@
-include ':TarjetaEJB'
-include ':TarjetaWEB'
-include ':TarjetaEAR'
-rootProject.name='Tarjeta'
-
