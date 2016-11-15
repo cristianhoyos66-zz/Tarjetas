@@ -1,0 +1,22 @@
+apply plugin: "sonar-runner"
+
+repositories {
+	mavenCentral()
+}
+
+
+sonarRunner {
+	sonarProperties {
+		property "sonar.host.url", "http://190.0.8.134:9000/"
+		property "sonar.jdbc.url", "jdbc:mysql://190.0.8.134:3306/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
+		property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+		property "sonar.login", "usuario.tecnico"
+		property "sonar.build-stability.url", "Jenkins:$System.env.JOB_URL"
+		property "sonar.password", "T3ch+T3cnic0IC"
+		property "sonar.jdbc.username", "sonar"
+		property "sonar.jdbc.password", "t0ps3cr3t"
+		property "sonar.sourceEncoding", "UTF-8"
+		property "sonar.language", "java"
+		property "sonar.projectVersion", "1.0"
+	}
+}

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="co.com.tarjeta.business.TarjetaBusinessTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-11-15T19:56:33" hostname="Alejandro-Naranjo" time="0.065">
+<testsuite name="co.com.tarjeta.business.TarjetaBusinessTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-11-15T20:06:54" hostname="Alejandro-Naranjo" time="0.162">
   <properties/>
-  <testcase name="calculateNewDebtShouldReturnDebtPlus1000xDelayDaysWhenTypeMasterCard" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.003"/>
-  <testcase name="getAllCardsMustToCallTarjetaBeanDotBuscarTodas" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.056"/>
+  <testcase name="calculateNewDebtShouldReturnDebtPlus1000xDelayDaysWhenTypeMasterCard" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.002"/>
+  <testcase name="getAllCardsMustToCallTarjetaBeanDotBuscarTodas" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.154"/>
   <testcase name="calculateNewDebtShouldReturnDebtPlus2000xDelayDaysWhenTypeVisaAE" classname="co.com.tarjeta.business.TarjetaBusinessTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
