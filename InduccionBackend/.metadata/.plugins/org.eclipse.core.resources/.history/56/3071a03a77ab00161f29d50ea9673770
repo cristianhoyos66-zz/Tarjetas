@@ -32,7 +32,7 @@ public class TarjetaBusiness {
 					BeanUtils.copyProperties(tarjetaDTO, i);
 					tarjetaDTO.setDebt(calculateNewDebt(i.getType(), i.getDebt(), i.getDelayDays()));
 				} catch (IllegalAccessException | InvocationTargetException e) {
-					throw new RuntimeException(e);
+					logger.info(e.getMessage());
 				}	
 				return tarjetaDTO;
 			}
@@ -46,9 +46,8 @@ public class TarjetaBusiness {
 				return debt + (delayDays*2000);
 			case "mastercard":
 				return debt + (delayDays*1000);
-			default:
-				return debt;
 		}
+		return debt;
 	}
 
 }
