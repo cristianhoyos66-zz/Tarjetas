@@ -2,7 +2,6 @@ package co.com.tarjeta.business;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import javax.ejb.Stateless;
@@ -10,6 +9,7 @@ import javax.inject.Inject;
 
 import org.apache.commons.beanutils.BeanUtils;
 
+import com.sun.media.jfxmedia.logging.Logger;
 
 import co.com.tarjeta.bean.TarjetaBean;
 import co.com.tarjeta.dto.TarjetaDTO;
@@ -21,7 +21,7 @@ public class TarjetaBusiness {
 	@Inject
 	private TarjetaBean tarjetaBean;
 	
-	Logger logger = Logger.getLogger(TarjetaBusiness.class.getName());
+	Logger logger = Logger.getLogger("myLogger");
 
 	
 	public List<TarjetaDTO> getAllCards() {
@@ -32,7 +32,7 @@ public class TarjetaBusiness {
 					BeanUtils.copyProperties(tarjetaDTO, i);
 					tarjetaDTO.setDebt(calculateNewDebt(i.getType(), i.getDebt(), i.getDelayDays()));
 				} catch (IllegalAccessException | InvocationTargetException e) {
-					logger.info(e.getMessage());
+					LOGGER.info(e);
 				}	
 				return tarjetaDTO;
 			}
